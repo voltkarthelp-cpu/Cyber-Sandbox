@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .touch-none {
+    touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+/* Cyber terminal styling */
+
+/* Custom crisp dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+::-webkit-scrollbar-thumb {
+  background: #4e5254;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64686b;
+}

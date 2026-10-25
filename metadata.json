@@ -1,0 +1,6 @@
+{
+  "name": "CyberSandbox: Terminal Hacking & Defense Simulator",
+  "description": "An interactive Java-powered cybersecurity sandbox where players master the Linux CLI terminal, map networks, exploit real-world vulnerabilities (SQLi, Log4Shell), and implement defensive hardening.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
