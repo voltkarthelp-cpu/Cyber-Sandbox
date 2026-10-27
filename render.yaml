@@ -1,0 +1,19 @@
+services:
+  # Option 1: Static Site (Recommended on Render: 100% Free, Global Edge CDN, Zero Cold Starts)
+  - type: web
+    name: cybersandbox-game
+    runtime: static
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    staticPublishPath: ./dist
+    routes:
+      # SPA rewrite rule so direct links / page reloads route to index.html without 404s
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
